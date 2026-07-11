@@ -20,3 +20,21 @@ def health_check() -> dict[str, str]:
     return {
         "status": "healthy",
     }
+
+
+@app.get("/about")
+def read_about() -> dict[str, str]:
+    return {
+        "project": "FastAPI Learning Journey",
+        "goal": "Senior Full Stack Developer bo'lish",
+        "current_month": "Month 1",
+        "current_lesson": "Lesson 2",
+    }
+
+
+@app.get("/contact")
+def read_contact() -> dict[str, str]:
+    return {
+        "email": "example@example.com",
+        "github": "GitHub profilingiz",
+    }
