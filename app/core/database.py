@@ -1,8 +1,10 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import DeclarativeBase, sessionmaker
 
-DATABASE_URL = "postgresql+psycopg://postgres:PAROL@localhost:5432/student_management_db"
-
+DATABASE_URL = (
+    "postgresql+psycopg://postgres:postgres123"
+    "@localhost:5432/student_management_db"
+)
 engine = create_engine(DATABASE_URL)
 
 SessionLocal = sessionmaker(
@@ -21,3 +23,8 @@ def get_db():
         yield db
     finally:
         db.close()
+
+Base
+engine
+SessionLocal
+get_db()
